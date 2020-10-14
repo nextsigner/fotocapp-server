@@ -4,7 +4,7 @@
   "description": "Servidor de FotoCapp",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -24,12 +24,8 @@
   "homepage": "https://github.com/nextsigner/fotocapp-server#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-fileupload": "^1.2.0",
-    "lodash": "^4.17.20",
     "mongoose": "^5.10.8",
-    "morgan": "^1.10.0",
     "nodemon": "^2.0.4"
   }
 }

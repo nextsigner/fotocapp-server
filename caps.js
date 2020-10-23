@@ -23,14 +23,14 @@
     getAsistencias = function(req, res){
         console.log('Buscando capturas de administrador '+req.query.consulta)
         //var regExp= new RegExp(''+(''+req.query.consulta).toUpperCase()+'|'+(''+req.query.consulta).toLocaleLowerCase())
-        var regExp= new RegExp(''+(''+req.query.consulta).toUpperCase()+'|'+(''+req.query.consulta).toLocaleLowerCase())
+        //var regExp= new RegExp(''+(''+req.query.consulta).toUpperCase()+'|'+(''+req.query.consulta).toLocaleLowerCase())
+        var regExp= new RegExp(req.query.consulta)
         Captura.find({
                           //date: {$gt: h }
                           //date: {$gte: "2019-06-12T00:00:00+01:00", $lte: "2019-12-12T23:00:00+01:00" }
                           //date: {$gte: h, $lte: hf }
                           administrador: regExp
                       },
-        /*Producto.find({ $or: [ { codigo: regExp }, { descripcion: regExp } ] },*/
                       ['administrador', 'fotografo', 'fotode', 'fechaRegistro'], // Columns to Return
                       {
                           skip:0, // Starting Row

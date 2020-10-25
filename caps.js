@@ -62,7 +62,7 @@
                               res.status(200).send({asistencias: false})
                           }else{
                               console.log('Se devolverán datos de capturas a la consulta: '+req.query.id);
-                              console.log('::::: '+resultados);
+                              //console.log('::::: '+resultados);
                               res.status(200).send({asistencias: resultados})
                           }
                       })

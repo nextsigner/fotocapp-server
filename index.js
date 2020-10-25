@@ -19,8 +19,8 @@ var bodyParser = require('body-parser');
 var app = express();
 app.use(express.static(__dirname));
 app.set('port', process.env.PORT || puertoApp);
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json({limit: '10mb'}));
+app.use(bodyParser.urlencoded({limit: '10mb', extended: true}));
 
 require('./caps.js')(app);
 

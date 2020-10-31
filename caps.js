@@ -36,7 +36,7 @@
                           skip:0, // Starting Row
                           //limit:1, // Ending Row
                           sort:{
-                              fechaRegistro: 0 //Sort by Date Added DESC
+                              fechaRegistro: -1 //Sort by Date Added DESC
                           }
                       },
                       function(err, resultados){
